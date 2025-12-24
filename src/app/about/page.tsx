@@ -22,33 +22,33 @@ import { formatNumber } from "@/lib/utils";
 const values = [
   {
     icon: Heart,
-    title: "Passion for Learning",
-    description: "We believe everyone deserves access to quality education that can transform their lives.",
+    title: "Semangat untuk Belajar",
+    description: "Kami percaya setiap orang berhak mendapatkan akses ke pendidikan berkualitas yang dapat mengubah hidup mereka.",
   },
   {
     icon: Target,
-    title: "Excellence",
-    description: "We maintain the highest standards in course quality and learning experience.",
+    title: "Keunggulan",
+    description: "Kami mempertahankan standar tertinggi dalam kualitas kursus dan pengalaman pembelajaran.",
   },
   {
     icon: Users,
-    title: "Community",
-    description: "We foster a supportive community where learners help each other grow.",
+    title: "Komunitas",
+    description: "Kami membina komunitas yang mendukung dimana pembelajar saling membantu untuk berkembang.",
   },
   {
     icon: Sparkles,
-    title: "Innovation",
-    description: "We continuously improve our platform with the latest technology and teaching methods.",
+    title: "Inovasi",
+    description: "Kami terus meningkatkan platform kami dengan teknologi dan metode pengajaran terbaru.",
   },
 ];
 
 const milestones = [
-  { year: "2019", event: "SkillUp Academy founded" },
-  { year: "2020", event: "Reached 10,000 students" },
-  { year: "2021", event: "Launched mobile app" },
-  { year: "2022", event: "Expanded to enterprise solutions" },
-  { year: "2023", event: "50,000+ students worldwide" },
-  { year: "2024", event: "200+ courses, 50+ instructors" },
+  { year: "2019", event: "SkillUp Academy didirikan" },
+  { year: "2020", event: "Mencapai 10.000 siswa" },
+  { year: "2021", event: "Meluncurkan aplikasi mobile" },
+  { year: "2022", event: "Ekspansi ke solusi enterprise" },
+  { year: "2023", event: "50.000+ siswa di seluruh dunia" },
+  { year: "2024", event: "200+ kursus, 50+ instruktur" },
 ];
 
 const team = [
@@ -106,17 +106,17 @@ export default function AboutPage() {
             className="mx-auto max-w-3xl text-center"
           >
             <Badge variant="secondary" className="mb-4">
-              Our Story
+              Kisah Kami
             </Badge>
             <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">
-              Empowering Learners to{" "}
-              <span className="gradient-text">Achieve Their Dreams</span>
+              Memberdayakan Pembelajar untuk{" "}
+              <span className="gradient-text">Meraih Impian Mereka</span>
             </h1>
             <p className="mt-6 text-lg text-slate-600">
-              SkillUp Academy was founded with a simple mission: to make
-              high-quality education accessible to everyone, everywhere. We
-              believe that learning should be engaging, practical, and
-              transformative.
+              SkillUp Academy didirikan dengan misi sederhana: membuat
+              pendidikan berkualitas tinggi dapat diakses oleh semua orang, di mana saja. Kami
+              percaya bahwa pembelajaran harus menarik, praktis, dan
+              transformatif.
             </p>
           </motion.div>
         </div>
@@ -131,28 +131,28 @@ export default function AboutPage() {
               <p className="mt-2 text-3xl font-bold text-slate-900">
                 {formatNumber(stats.students)}+
               </p>
-              <p className="text-slate-600">Students</p>
+              <p className="text-slate-600">Siswa</p>
             </div>
             <div className="text-center">
               <BookOpen className="mx-auto h-8 w-8 text-primary" />
               <p className="mt-2 text-3xl font-bold text-slate-900">
                 {stats.courses}+
               </p>
-              <p className="text-slate-600">Courses</p>
+              <p className="text-slate-600">Kursus</p>
             </div>
             <div className="text-center">
               <Globe className="mx-auto h-8 w-8 text-primary" />
               <p className="mt-2 text-3xl font-bold text-slate-900">
                 {stats.countries}+
               </p>
-              <p className="text-slate-600">Countries</p>
+              <p className="text-slate-600">Negara</p>
             </div>
             <div className="text-center">
               <Award className="mx-auto h-8 w-8 text-primary" />
               <p className="mt-2 text-3xl font-bold text-slate-900">
                 {stats.completionRate}%
               </p>
-              <p className="text-slate-600">Completion Rate</p>
+              <p className="text-slate-600">Tingkat Penyelesaian</p>
             </div>
           </div>
         </div>
@@ -169,22 +169,22 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-                Our Mission
+                Misi Kami
               </h2>
               <p className="mt-4 text-lg text-slate-600">
-                We&apos;re on a mission to democratize education and help millions
-                of people acquire the skills they need to succeed in the modern
-                economy.
+                Kami dalam misi untuk mendemokratisasi pendidikan dan membantu jutaan
+                orang memperoleh keterampilan yang mereka butuhkan untuk sukses di ekonomi
+                modern.
               </p>
               <p className="mt-4 text-slate-600">
-                Whether you&apos;re looking to switch careers, learn a new skill, or
-                advance in your current role, SkillUp Academy provides the
-                courses and support you need to achieve your goals.
+                Baik Anda ingin beralih karier, mempelajari keterampilan baru, atau
+                maju dalam peran Anda saat ini, SkillUp Academy menyediakan
+                kursus dan dukungan yang Anda butuhkan untuk mencapai tujuan Anda.
               </p>
               <p className="mt-4 text-slate-600">
-                Our platform combines expert-led video courses with hands-on
-                projects, quizzes, and a supportive community to ensure you not
-                only learn but also apply what you&apos;ve learned.
+                Platform kami menggabungkan kursus video yang dipimpin ahli dengan proyek
+                langsung, kuis, dan komunitas yang mendukung untuk memastikan Anda tidak
+                hanya belajar tetapi juga menerapkan apa yang telah Anda pelajari.
               </p>
             </motion.div>
 
@@ -216,10 +216,10 @@ export default function AboutPage() {
             className="text-center"
           >
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-              Our Values
+              Nilai-Nilai Kami
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-              These core values guide everything we do at SkillUp Academy.
+              Nilai-nilai inti ini memandu semua yang kami lakukan di SkillUp Academy.
             </p>
           </motion.div>
 
@@ -262,10 +262,10 @@ export default function AboutPage() {
             className="text-center"
           >
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-              Our Journey
+              Perjalanan Kami
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-              From a small idea to a global learning platform.
+              Dari ide kecil menjadi platform pembelajaran global.
             </p>
           </motion.div>
 
@@ -313,10 +313,10 @@ export default function AboutPage() {
             className="text-center"
           >
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-              Meet Our Team
+              Kenali Tim Kami
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-              The passionate people behind SkillUp Academy.
+              Orang-orang bersemangat di balik SkillUp Academy.
             </p>
           </motion.div>
 
@@ -351,25 +351,25 @@ export default function AboutPage() {
       <section className="gradient-primary py-16">
         <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            Join Our Learning Community
+            Bergabung dengan Komunitas Pembelajaran Kami
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
-            Start your learning journey today and join thousands of learners
-            who are transforming their careers.
+            Mulai perjalanan pembelajaran Anda hari ini dan bergabunglah dengan ribuan pembelajar
+            yang sedang mentransformasi karier mereka.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               size="xl"
               className="bg-white text-primary hover:bg-white/90"
             >
-              Start Learning Free
+              Mulai Belajar Gratis
             </Button>
             <Button
               variant="outline"
               size="xl"
               className="border-white/30 text-white hover:bg-white/10"
             >
-              View Courses
+              Lihat Kursus
             </Button>
           </div>
         </div>

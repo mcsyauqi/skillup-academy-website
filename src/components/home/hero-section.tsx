@@ -14,16 +14,16 @@ import { formatNumber } from "@/lib/utils";
 const popularTags = [
   "Digital Marketing",
   "UI/UX Design",
-  "Data Analytics",
+  "Analitik Data",
   "Python",
   "React",
-  "Business Strategy",
+  "Strategi Bisnis",
 ];
 
 const statsItems = [
-  { icon: Users, value: stats.students, label: "Students", suffix: "+" },
-  { icon: BookOpen, value: stats.courses, label: "Courses", suffix: "+" },
-  { icon: Award, value: stats.instructors, label: "Instructors", suffix: "+" },
+  { icon: Users, value: stats.students, label: "Siswa", suffix: "+" },
+  { icon: BookOpen, value: stats.courses, label: "Kursus", suffix: "+" },
+  { icon: Award, value: stats.instructors, label: "Instruktur", suffix: "+" },
 ];
 
 export function HeroSection() {
@@ -49,18 +49,18 @@ export function HeroSection() {
           >
             <Badge variant="secondary" className="mb-4">
               <Star className="mr-1 h-3 w-3 fill-current" />
-              Rated 4.8/5 by 50,000+ learners
+              Dinilai 4.8/5 oleh 50.000+ pembelajar
             </Badge>
 
             <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              Level Up Your Career with{" "}
-              <span className="gradient-text">Expert-Led Courses</span>
+              Tingkatkan Karir Anda dengan{" "}
+              <span className="gradient-text">Kursus dari Para Ahli</span>
             </h1>
 
             <p className="mt-6 text-lg text-slate-600 sm:text-xl">
-              Learn from industry experts anytime, anywhere. Join 50,000+ professionals
-              who&apos;ve transformed their careers with our premium courses in digital skills,
-              business, and technology.
+              Belajar dari ahli industri kapan saja, di mana saja. Bergabung dengan 50.000+ profesional
+              yang telah mengubah karir mereka dengan kursus premium kami di bidang keterampilan digital,
+              bisnis, dan teknologi.
             </p>
 
             {/* Search bar */}
@@ -79,21 +79,21 @@ export function HeroSection() {
                     <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
                     <Input
                       type="search"
-                      placeholder="What do you want to learn today?"
+                      placeholder="Apa yang ingin Anda pelajari hari ini?"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className="h-14 bg-white pl-12 pr-4 text-base shadow-lg"
                     />
                   </div>
                   <Button type="submit" size="xl" className="hidden sm:flex">
-                    Search
+                    Cari
                   </Button>
                 </div>
               </form>
 
               {/* Popular tags */}
               <div className="mt-4 flex flex-wrap items-center justify-center gap-2 lg:justify-start">
-                <span className="text-sm text-slate-500">Popular:</span>
+                <span className="text-sm text-slate-500">Populer:</span>
                 {popularTags.map((tag) => (
                   <Link key={tag} href={`/courses?search=${encodeURIComponent(tag)}`}>
                     <Badge
@@ -111,12 +111,12 @@ export function HeroSection() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
               <Link href="/courses">
                 <Button size="xl" className="w-full sm:w-auto">
-                  Explore Courses
+                  Jelajahi Kursus
                 </Button>
               </Link>
               <Button variant="outline" size="xl" className="w-full sm:w-auto">
                 <Play className="mr-2 h-5 w-5" />
-                Watch Demo
+                Tonton Demo
               </Button>
             </div>
           </motion.div>
@@ -134,7 +134,7 @@ export function HeroSection() {
                 <div className="relative aspect-video overflow-hidden rounded-lg">
                   <Image
                     src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=450&fit=crop"
-                    alt="Students learning together"
+                    alt="Siswa belajar bersama"
                     fill
                     className="object-cover"
                   />
@@ -156,8 +156,8 @@ export function HeroSection() {
                       <Award className="h-4 w-4 text-emerald" />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-500">Certificate</p>
-                      <p className="text-sm font-semibold">Earned!</p>
+                      <p className="text-xs text-slate-500">Sertifikat</p>
+                      <p className="text-sm font-semibold">Diperoleh!</p>
                     </div>
                   </div>
                 </motion.div>
@@ -172,7 +172,7 @@ export function HeroSection() {
                       <Star className="h-4 w-4 fill-amber text-amber" />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-500">Course Rating</p>
+                      <p className="text-xs text-slate-500">Rating Kursus</p>
                       <p className="text-sm font-semibold">4.9/5.0</p>
                     </div>
                   </div>
@@ -188,8 +188,8 @@ export function HeroSection() {
                       <Users className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <p className="text-xs text-slate-500">Active Learners</p>
-                      <p className="text-sm font-semibold">2,847 online</p>
+                      <p className="text-xs text-slate-500">Pembelajar Aktif</p>
+                      <p className="text-sm font-semibold">2.847 online</p>
                     </div>
                   </div>
                 </motion.div>

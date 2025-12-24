@@ -55,11 +55,11 @@ export function CategoriesSection() {
           className="text-center"
         >
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-            Explore by Category
+            Jelajahi Berdasarkan Kategori
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-            Choose from 200+ courses across 6 categories. Find the perfect course
-            to advance your career.
+            Pilih dari 200+ kursus di 6 kategori. Temukan kursus yang sempurna
+            untuk memajukan karir Anda.
           </p>
         </motion.div>
 
@@ -98,7 +98,7 @@ export function CategoriesSection() {
                     {/* Course count & arrow */}
                     <div className="mt-4 flex items-center justify-between">
                       <span className="text-sm font-medium text-slate-500">
-                        {category.courseCount} courses
+                        {category.courseCount} kursus
                       </span>
                       <ArrowRight className="h-5 w-5 text-slate-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary" />
                     </div>

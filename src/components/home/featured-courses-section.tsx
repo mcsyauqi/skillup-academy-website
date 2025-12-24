@@ -46,15 +46,15 @@ export function FeaturedCoursesSection() {
         >
           <div>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-              Featured Courses
+              Kursus Unggulan
             </h2>
             <p className="mt-2 text-lg text-slate-600">
-              Top-rated courses chosen by our community
+              Kursus terbaik yang dipilih oleh komunitas kami
             </p>
           </div>
           <Link href="/courses">
             <Button variant="outline" className="gap-2">
-              View All Courses
+              Lihat Semua Kursus
               <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
@@ -83,9 +83,9 @@ export function FeaturedCoursesSection() {
                     {/* Badges */}
                     <div className="absolute left-3 top-3 flex gap-2">
                       {course.isBestseller && (
-                        <Badge variant="bestseller">Bestseller</Badge>
+                        <Badge variant="bestseller">Terlaris</Badge>
                       )}
-                      {course.isNew && <Badge variant="new">New</Badge>}
+                      {course.isNew && <Badge variant="new">Baru</Badge>}
                     </div>
                     {/* Play overlay */}
                     <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">

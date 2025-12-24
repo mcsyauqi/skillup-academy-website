@@ -12,12 +12,12 @@ import { Input } from "@/components/ui/input";
 import { blogPosts } from "@/lib/data";
 
 const categories = [
-  "All",
+  "Semua",
   "Design",
   "Development",
   "Marketing",
   "Data Science",
-  "Career",
+  "Karier",
 ];
 
 const containerVariants = {
@@ -55,14 +55,14 @@ export default function BlogPage() {
             className="mx-auto max-w-3xl text-center"
           >
             <Badge variant="secondary" className="mb-4">
-              Learning Resources
+              Sumber Pembelajaran
             </Badge>
             <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">
-              The SkillUp Blog
+              Blog SkillUp
             </h1>
             <p className="mt-4 text-lg text-slate-600">
-              Insights, tutorials, and tips from industry experts to help you
-              grow your skills and advance your career.
+              Wawasan, tutorial, dan tips dari para ahli industri untuk membantu Anda
+              mengembangkan keterampilan dan memajukan karier Anda.
             </p>
 
             {/* Search */}
@@ -70,7 +70,7 @@ export default function BlogPage() {
               <div className="relative">
                 <Input
                   type="search"
-                  placeholder="Search articles..."
+                  placeholder="Cari artikel..."
                   className="bg-white pr-12"
                 />
                 <Button
@@ -87,7 +87,7 @@ export default function BlogPage() {
               {categories.map((category) => (
                 <Badge
                   key={category}
-                  variant={category === "All" ? "default" : "outline"}
+                  variant={category === "Semua" ? "default" : "outline"}
                   className="cursor-pointer transition-colors hover:bg-primary hover:text-white"
                 >
                   {category}
@@ -120,7 +120,7 @@ export default function BlogPage() {
                   </div>
                   <CardContent className="flex flex-col justify-center p-6 md:p-8">
                     <Badge variant="secondary" className="w-fit">
-                      Featured
+                      Unggulan
                     </Badge>
                     <h2 className="mt-4 text-2xl font-bold text-slate-900 group-hover:text-primary transition-colors sm:text-3xl">
                       {featuredPost.title}
@@ -143,7 +143,7 @@ export default function BlogPage() {
                           <span>•</span>
                           <span className="flex items-center gap-1">
                             <Clock className="h-4 w-4" />
-                            {featuredPost.readTime} min read
+                            {featuredPost.readTime} menit baca
                           </span>
                         </div>
                       </div>
@@ -160,9 +160,9 @@ export default function BlogPage() {
       <section className="bg-slate-50 py-16 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-slate-900">Latest Articles</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Artikel Terbaru</h2>
             <Button variant="outline" className="gap-2">
-              View All
+              Lihat Semua
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
@@ -209,7 +209,7 @@ export default function BlogPage() {
                         </div>
                         <span className="flex items-center gap-1">
                           <Clock className="h-4 w-4" />
-                          {post.readTime} min
+                          {post.readTime} menit
                         </span>
                       </div>
                     </CardContent>
@@ -222,7 +222,7 @@ export default function BlogPage() {
           {/* Load More */}
           <div className="mt-12 text-center">
             <Button variant="outline" size="lg">
-              Load More Articles
+              Muat Lebih Banyak Artikel
             </Button>
           </div>
         </div>
@@ -233,20 +233,20 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl gradient-primary p-8 text-center text-white sm:p-12">
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Subscribe to Our Newsletter
+              Berlangganan Newsletter Kami
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
-              Get the latest articles, tutorials, and learning resources
-              delivered straight to your inbox.
+              Dapatkan artikel terbaru, tutorial, dan sumber pembelajaran
+              langsung ke inbox Anda.
             </p>
             <div className="mx-auto mt-8 flex max-w-md gap-3">
               <Input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Masukkan email Anda"
                 className="border-white/20 bg-white/10 text-white placeholder:text-white/60"
               />
               <Button className="bg-white text-primary hover:bg-white/90">
-                Subscribe
+                Berlangganan
               </Button>
             </div>
           </div>

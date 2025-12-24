@@ -30,25 +30,25 @@ import {
 import { courses, categories } from "@/lib/data";
 import { formatPrice, formatDuration, formatNumber, cn } from "@/lib/utils";
 
-const levels = ["All Levels", "Beginner", "Intermediate", "Advanced"];
+const levels = ["Semua Level", "Beginner", "Intermediate", "Advanced"];
 const durations = [
-  { label: "All Durations", value: "all" },
-  { label: "0-2 hours", value: "short" },
-  { label: "2-10 hours", value: "medium" },
-  { label: "10+ hours", value: "long" },
+  { label: "Semua Durasi", value: "all" },
+  { label: "0-2 jam", value: "short" },
+  { label: "2-10 jam", value: "medium" },
+  { label: "10+ jam", value: "long" },
 ];
 const sortOptions = [
-  { label: "Most Popular", value: "popular" },
-  { label: "Highest Rated", value: "rating" },
-  { label: "Newest", value: "newest" },
-  { label: "Price: Low to High", value: "price-asc" },
-  { label: "Price: High to Low", value: "price-desc" },
+  { label: "Paling Populer", value: "popular" },
+  { label: "Rating Tertinggi", value: "rating" },
+  { label: "Terbaru", value: "newest" },
+  { label: "Harga: Rendah ke Tinggi", value: "price-asc" },
+  { label: "Harga: Tinggi ke Rendah", value: "price-desc" },
 ];
 
 export default function CoursesPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedLevel, setSelectedLevel] = useState("All Levels");
+  const [selectedLevel, setSelectedLevel] = useState("Semua Level");
   const [selectedDuration, setSelectedDuration] = useState("all");
   const [sortBy, setSortBy] = useState("popular");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
@@ -76,7 +76,7 @@ export default function CoursesPage() {
     }
 
     // Level filter
-    if (selectedLevel !== "All Levels") {
+    if (selectedLevel !== "Semua Level") {
       result = result.filter((course) => course.level === selectedLevel);
     }
 
@@ -116,13 +116,13 @@ export default function CoursesPage() {
   const clearFilters = () => {
     setSearchQuery("");
     setSelectedCategory("all");
-    setSelectedLevel("All Levels");
+    setSelectedLevel("Semua Level");
     setSelectedDuration("all");
   };
 
   const activeFiltersCount = [
     selectedCategory !== "all",
-    selectedLevel !== "All Levels",
+    selectedLevel !== "Semua Level",
     selectedDuration !== "all",
   ].filter(Boolean).length;
 
@@ -132,10 +132,10 @@ export default function CoursesPage() {
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-            Explore Courses
+            Jelajahi Kursus
           </h1>
           <p className="mt-2 text-lg text-slate-600">
-            Choose from 200+ courses to advance your career
+            Pilih dari 200+ kursus untuk memajukan karir Anda
           </p>
 
           {/* Search and Filters */}
@@ -145,7 +145,7 @@ export default function CoursesPage() {
               <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
               <Input
                 type="search"
-                placeholder="Search courses..."
+                placeholder="Cari kursus..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-12"
@@ -160,7 +160,7 @@ export default function CoursesPage() {
                 className="gap-2"
               >
                 <Filter className="h-4 w-4" />
-                Filters
+                Filter
                 {activeFiltersCount > 0 && (
                   <Badge variant="default" className="ml-1 h-5 w-5 rounded-full p-0 text-xs">
                     {activeFiltersCount}
@@ -170,7 +170,7 @@ export default function CoursesPage() {
 
               <Select value={sortBy} onValueChange={setSortBy}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Sort by" />
+                  <SelectValue placeholder="Urutkan" />
                 </SelectTrigger>
                 <SelectContent>
                   {sortOptions.map((option) => (
@@ -214,10 +214,10 @@ export default function CoursesPage() {
                 {/* Category */}
                 <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                   <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Category" />
+                    <SelectValue placeholder="Kategori" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">All Categories</SelectItem>
+                    <SelectItem value="all">Semua Kategori</SelectItem>
                     {categories.map((category) => (
                       <SelectItem key={category.slug} value={category.slug}>
                         {category.name}
@@ -229,7 +229,7 @@ export default function CoursesPage() {
                 {/* Level */}
                 <Select value={selectedLevel} onValueChange={setSelectedLevel}>
                   <SelectTrigger className="w-[160px]">
-                    <SelectValue placeholder="Level" />
+                    <SelectValue placeholder="Tingkat" />
                   </SelectTrigger>
                   <SelectContent>
                     {levels.map((level) => (
@@ -243,7 +243,7 @@ export default function CoursesPage() {
                 {/* Duration */}
                 <Select value={selectedDuration} onValueChange={setSelectedDuration}>
                   <SelectTrigger className="w-[160px]">
-                    <SelectValue placeholder="Duration" />
+                    <SelectValue placeholder="Durasi" />
                   </SelectTrigger>
                   <SelectContent>
                     {durations.map((duration) => (
@@ -257,7 +257,7 @@ export default function CoursesPage() {
                 {activeFiltersCount > 0 && (
                   <Button variant="ghost" onClick={clearFilters} className="gap-2">
                     <X className="h-4 w-4" />
-                    Clear filters
+                    Hapus filter
                   </Button>
                 )}
               </div>
@@ -270,7 +270,7 @@ export default function CoursesPage() {
       <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Results count */}
         <p className="mb-6 text-slate-600">
-          Showing {filteredCourses.length} course{filteredCourses.length !== 1 && "s"}
+          Menampilkan {filteredCourses.length} kursus
         </p>
 
         {/* Courses Grid/List */}
@@ -312,9 +312,9 @@ export default function CoursesPage() {
                       />
                       <div className="absolute left-3 top-3 flex gap-2">
                         {course.isBestseller && (
-                          <Badge variant="bestseller">Bestseller</Badge>
+                          <Badge variant="bestseller">Terlaris</Badge>
                         )}
-                        {course.isNew && <Badge variant="new">New</Badge>}
+                        {course.isNew && <Badge variant="new">Baru</Badge>}
                       </div>
                     </div>
 
@@ -385,10 +385,10 @@ export default function CoursesPage() {
         ) : (
           <div className="py-16 text-center">
             <p className="text-lg text-slate-600">
-              No courses found matching your criteria.
+              Tidak ada kursus yang sesuai dengan kriteria Anda.
             </p>
             <Button variant="outline" onClick={clearFilters} className="mt-4">
-              Clear all filters
+              Hapus semua filter
             </Button>
           </div>
         )}

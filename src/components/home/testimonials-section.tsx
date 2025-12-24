@@ -39,11 +39,11 @@ export function TestimonialsSection() {
           className="text-center"
         >
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-            What Our Learners Say
+            Kata Pembelajar Kami
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-            Join thousands of professionals who&apos;ve transformed their careers
-            with SkillUp Academy
+            Bergabung dengan ribuan profesional yang telah mengubah karir mereka
+            bersama SkillUp Academy
           </p>
         </motion.div>
 
@@ -97,7 +97,7 @@ export function TestimonialsSection() {
 
                   {/* Course */}
                   <p className="mt-4 text-xs text-slate-400">
-                    Course: {testimonial.course}
+                    Kursus: {testimonial.course}
                   </p>
                 </CardContent>
               </Card>

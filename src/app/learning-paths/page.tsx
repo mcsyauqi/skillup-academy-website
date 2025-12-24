@@ -21,18 +21,18 @@ import { formatDuration, formatNumber } from "@/lib/utils";
 const benefits = [
   {
     icon: Target,
-    title: "Structured Learning",
-    description: "Follow a curated path designed by industry experts",
+    title: "Pembelajaran Terstruktur",
+    description: "Ikuti jalur yang dikurasi oleh para ahli industri",
   },
   {
     icon: TrendingUp,
-    title: "Career-Focused",
-    description: "Build skills that employers actually want",
+    title: "Fokus pada Karier",
+    description: "Bangun keterampilan yang benar-benar dicari pemberi kerja",
   },
   {
     icon: Award,
-    title: "Verified Credentials",
-    description: "Earn certificates recognized by top companies",
+    title: "Kredensial Terverifikasi",
+    description: "Dapatkan sertifikat yang diakui oleh perusahaan top",
   },
 ];
 
@@ -68,15 +68,14 @@ export default function LearningPathsPage() {
             className="mx-auto max-w-3xl text-center"
           >
             <Badge variant="secondary" className="mb-4">
-              Career-Focused Learning
+              Pembelajaran Fokus Karier
             </Badge>
             <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">
-              Learning Paths
+              Jalur Pembelajaran
             </h1>
             <p className="mt-4 text-lg text-slate-600">
-              Curated course bundles designed to help you master new skills and
-              advance your career. Each path includes multiple courses that build
-              upon each other.
+              Bundel kursus yang dikurasi untuk membantu Anda menguasai keterampilan baru dan
+              memajukan karier Anda. Setiap jalur mencakup beberapa kursus yang saling melengkapi.
             </p>
           </motion.div>
 
@@ -151,7 +150,7 @@ export default function LearningPathsPage() {
                       <div className="mt-4 flex flex-wrap gap-6 text-sm text-slate-500">
                         <div className="flex items-center gap-1">
                           <BookOpen className="h-4 w-4" />
-                          <span>{path.courses.length} courses</span>
+                          <span>{path.courses.length} kursus</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <Clock className="h-4 w-4" />
@@ -159,7 +158,7 @@ export default function LearningPathsPage() {
                         </div>
                         <div className="flex items-center gap-1">
                           <Users className="h-4 w-4" />
-                          <span>{formatNumber(path.students)} enrolled</span>
+                          <span>{formatNumber(path.students)} terdaftar</span>
                         </div>
                         <Badge variant="outline">{path.level}</Badge>
                       </div>
@@ -167,7 +166,7 @@ export default function LearningPathsPage() {
                       {/* Courses preview */}
                       <div className="mt-6">
                         <p className="text-sm font-medium text-slate-700">
-                          Courses included:
+                          Kursus yang termasuk:
                         </p>
                         <div className="mt-2 flex flex-wrap gap-2">
                           {path.courses.map((course) => (
@@ -182,11 +181,11 @@ export default function LearningPathsPage() {
                       <div className="mt-6 flex gap-4">
                         <Link href={`/learning-paths/${path.slug}`}>
                           <Button className="gap-2">
-                            Start Learning Path
+                            Mulai Jalur Pembelajaran
                             <ArrowRight className="h-4 w-4" />
                           </Button>
                         </Link>
-                        <Button variant="outline">Learn More</Button>
+                        <Button variant="outline">Pelajari Lebih Lanjut</Button>
                       </div>
                     </div>
                   </div>
@@ -201,14 +200,14 @@ export default function LearningPathsPage() {
       <section className="bg-slate-900 py-16">
         <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            Not sure which path to choose?
+            Tidak yakin jalur mana yang harus dipilih?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
-            Take our quick assessment to get personalized recommendations based on
-            your goals and experience level.
+            Ikuti penilaian cepat kami untuk mendapatkan rekomendasi yang dipersonalisasi berdasarkan
+            tujuan dan tingkat pengalaman Anda.
           </p>
           <Button size="lg" className="mt-8 bg-white text-slate-900 hover:bg-white/90">
-            Take Career Assessment
+            Ikuti Penilaian Karier
           </Button>
         </div>
       </section>

@@ -21,45 +21,45 @@ import { companyLogos } from "@/lib/data";
 const features = [
   {
     icon: Users,
-    title: "Team Management",
-    description: "Easily manage team access, assign courses, and track progress from a central dashboard.",
+    title: "Manajemen Tim",
+    description: "Kelola akses tim, tetapkan kursus, dan lacak progres dengan mudah dari dasbor terpusat.",
   },
   {
     icon: BarChart3,
-    title: "Analytics & Reporting",
-    description: "Get detailed insights on team learning progress, engagement, and skill development.",
+    title: "Analitik & Pelaporan",
+    description: "Dapatkan wawasan detail tentang progres pembelajaran tim, keterlibatan, dan pengembangan keterampilan.",
   },
   {
     icon: Award,
-    title: "Custom Learning Paths",
-    description: "Create tailored learning programs aligned with your company's goals and needs.",
+    title: "Jalur Pembelajaran Kustom",
+    description: "Buat program pembelajaran yang disesuaikan dengan tujuan dan kebutuhan perusahaan Anda.",
   },
   {
     icon: Shield,
-    title: "Enterprise Security",
-    description: "SSO integration, data privacy compliance, and enterprise-grade security.",
+    title: "Keamanan Enterprise",
+    description: "Integrasi SSO, kepatuhan privasi data, dan keamanan tingkat enterprise.",
   },
   {
     icon: Headphones,
-    title: "Dedicated Support",
-    description: "Get a dedicated account manager and priority support for your team.",
+    title: "Dukungan Khusus",
+    description: "Dapatkan manajer akun khusus dan dukungan prioritas untuk tim Anda.",
   },
   {
     icon: TrendingUp,
-    title: "ROI Tracking",
-    description: "Measure the impact of training on employee performance and business outcomes.",
+    title: "Pelacakan ROI",
+    description: "Ukur dampak pelatihan terhadap kinerja karyawan dan hasil bisnis.",
   },
 ];
 
 const benefits = [
-  "Access to 200+ professional courses",
-  "Custom learning paths for your team",
-  "Detailed analytics and reporting",
-  "SSO & enterprise security",
-  "Dedicated account manager",
-  "Priority support",
-  "Volume discounts",
-  "API access",
+  "Akses ke 200+ kursus profesional",
+  "Jalur pembelajaran kustom untuk tim Anda",
+  "Analitik dan pelaporan terperinci",
+  "SSO & keamanan enterprise",
+  "Manajer akun khusus",
+  "Dukungan prioritas",
+  "Diskon volume",
+  "Akses API",
 ];
 
 const containerVariants = {
@@ -96,24 +96,24 @@ export default function ForBusinessPage() {
             >
               <Badge variant="secondary" className="mb-4">
                 <Building2 className="mr-1 h-3 w-3" />
-                Enterprise Solutions
+                Solusi Enterprise
               </Badge>
 
               <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl lg:text-6xl">
-                Upskill Your Team with{" "}
-                <span className="gradient-text">SkillUp for Business</span>
+                Tingkatkan Keterampilan Tim Anda dengan{" "}
+                <span className="gradient-text">SkillUp untuk Bisnis</span>
               </h1>
 
               <p className="mt-6 text-lg text-slate-600">
-                Transform your workforce with our enterprise learning platform.
-                Give your team access to world-class courses, track their
-                progress, and measure the impact on your business.
+                Transformasi tenaga kerja Anda dengan platform pembelajaran enterprise kami.
+                Berikan tim Anda akses ke kursus kelas dunia, lacak progres mereka,
+                dan ukur dampaknya pada bisnis Anda.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <Button size="xl">Request a Demo</Button>
+                <Button size="xl">Minta Demo</Button>
                 <Button variant="outline" size="xl">
-                  Contact Sales
+                  Hubungi Sales
                 </Button>
               </div>
 
@@ -121,15 +121,15 @@ export default function ForBusinessPage() {
               <div className="mt-12 grid grid-cols-3 gap-8">
                 <div>
                   <p className="text-3xl font-bold text-slate-900">500+</p>
-                  <p className="text-sm text-slate-600">Enterprise clients</p>
+                  <p className="text-sm text-slate-600">Klien enterprise</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-slate-900">94%</p>
-                  <p className="text-sm text-slate-600">Completion rate</p>
+                  <p className="text-sm text-slate-600">Tingkat penyelesaian</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-slate-900">4.8/5</p>
-                  <p className="text-sm text-slate-600">Satisfaction score</p>
+                  <p className="text-sm text-slate-600">Skor kepuasan</p>
                 </div>
               </div>
             </motion.div>
@@ -143,23 +143,23 @@ export default function ForBusinessPage() {
               <Card className="shadow-2xl">
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-bold text-slate-900">
-                    Get Started Today
+                    Mulai Hari Ini
                   </h2>
                   <p className="mt-2 text-slate-600">
-                    Fill out the form and we&apos;ll be in touch shortly.
+                    Isi formulir dan kami akan segera menghubungi Anda.
                   </p>
 
                   <form className="mt-6 space-y-4">
                     <div className="grid gap-4 sm:grid-cols-2">
                       <div>
                         <label className="text-sm font-medium text-slate-700">
-                          First Name
+                          Nama Depan
                         </label>
                         <Input className="mt-1" placeholder="John" />
                       </div>
                       <div>
                         <label className="text-sm font-medium text-slate-700">
-                          Last Name
+                          Nama Belakang
                         </label>
                         <Input className="mt-1" placeholder="Smith" />
                       </div>
@@ -167,7 +167,7 @@ export default function ForBusinessPage() {
 
                     <div>
                       <label className="text-sm font-medium text-slate-700">
-                        Work Email
+                        Email Kantor
                       </label>
                       <Input
                         className="mt-1"
@@ -178,31 +178,31 @@ export default function ForBusinessPage() {
 
                     <div>
                       <label className="text-sm font-medium text-slate-700">
-                        Company Name
+                        Nama Perusahaan
                       </label>
                       <Input className="mt-1" placeholder="Acme Inc." />
                     </div>
 
                     <div>
                       <label className="text-sm font-medium text-slate-700">
-                        Team Size
+                        Ukuran Tim
                       </label>
                       <select className="mt-1 flex h-11 w-full rounded-lg border border-input bg-white px-4 py-2 text-sm">
-                        <option>1-10 employees</option>
-                        <option>11-50 employees</option>
-                        <option>51-200 employees</option>
-                        <option>201-500 employees</option>
-                        <option>500+ employees</option>
+                        <option>1-10 karyawan</option>
+                        <option>11-50 karyawan</option>
+                        <option>51-200 karyawan</option>
+                        <option>201-500 karyawan</option>
+                        <option>500+ karyawan</option>
                       </select>
                     </div>
 
                     <Button type="submit" className="w-full" size="lg">
-                      Request Demo
+                      Minta Demo
                     </Button>
                   </form>
 
                   <p className="mt-4 text-center text-xs text-slate-500">
-                    By submitting, you agree to our Terms and Privacy Policy.
+                    Dengan mengirim, Anda setuju dengan Ketentuan dan Kebijakan Privasi kami.
                   </p>
                 </CardContent>
               </Card>
@@ -215,7 +215,7 @@ export default function ForBusinessPage() {
       <section className="border-y bg-white py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm font-medium text-slate-500">
-            TRUSTED BY LEADING COMPANIES
+            DIPERCAYA OLEH PERUSAHAAN TERKEMUKA
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-8 sm:gap-12">
             {companyLogos.map((company, index) => (
@@ -247,11 +247,11 @@ export default function ForBusinessPage() {
             className="text-center"
           >
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-              Everything You Need to Train Your Team
+              Semua yang Anda Butuhkan untuk Melatih Tim Anda
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-              Our enterprise platform provides all the tools you need to
-              manage, track, and optimize your team&apos;s learning journey.
+              Platform enterprise kami menyediakan semua alat yang Anda butuhkan untuk
+              mengelola, melacak, dan mengoptimalkan perjalanan pembelajaran tim Anda.
             </p>
           </motion.div>
 
@@ -292,11 +292,11 @@ export default function ForBusinessPage() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-                Why Choose SkillUp for Business?
+                Mengapa Memilih SkillUp untuk Bisnis?
               </h2>
               <p className="mt-4 text-lg text-slate-600">
-                Join hundreds of companies who trust SkillUp Academy to develop
-                their workforce and drive business growth.
+                Bergabunglah dengan ratusan perusahaan yang mempercayai SkillUp Academy untuk mengembangkan
+                tenaga kerja mereka dan mendorong pertumbuhan bisnis.
               </p>
 
               <ul className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -309,7 +309,7 @@ export default function ForBusinessPage() {
               </ul>
 
               <Button size="lg" className="mt-8">
-                Get Started
+                Mulai Sekarang
               </Button>
             </motion.div>
 
@@ -330,10 +330,10 @@ export default function ForBusinessPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-lg font-semibold text-white">
-                    Real-time Analytics Dashboard
+                    Dasbor Analitik Real-time
                   </p>
                   <p className="text-sm text-white/80">
-                    Track your team&apos;s learning progress
+                    Lacak progres pembelajaran tim Anda
                   </p>
                 </div>
               </div>
@@ -346,25 +346,25 @@ export default function ForBusinessPage() {
       <section className="gradient-primary py-16">
         <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            Ready to Transform Your Team?
+            Siap Mentransformasi Tim Anda?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
-            Schedule a personalized demo and see how SkillUp for Business can
-            help your organization grow.
+            Jadwalkan demo yang dipersonalisasi dan lihat bagaimana SkillUp untuk Bisnis dapat
+            membantu organisasi Anda berkembang.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               size="xl"
               className="bg-white text-primary hover:bg-white/90"
             >
-              Request Demo
+              Minta Demo
             </Button>
             <Button
               variant="outline"
               size="xl"
               className="border-white/30 text-white hover:bg-white/10"
             >
-              Contact Sales
+              Hubungi Sales
             </Button>
           </div>
         </div>

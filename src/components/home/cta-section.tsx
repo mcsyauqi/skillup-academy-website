@@ -35,18 +35,18 @@ export function CTASection() {
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
             <Sparkles className="h-4 w-4" />
-            Start your learning journey today
+            Mulai perjalanan belajar Anda hari ini
           </div>
 
           {/* Heading */}
           <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-            Ready to Level Up Your Career?
+            Siap Tingkatkan Karir Anda?
           </h2>
 
           {/* Description */}
           <p className="mx-auto mt-6 max-w-xl text-lg text-white/80">
-            Join 50,000+ professionals who&apos;ve transformed their careers with
-            SkillUp Academy. Start learning from industry experts today.
+            Bergabung dengan 50.000+ profesional yang telah mengubah karir mereka bersama
+            SkillUp Academy. Mulai belajar dari ahli industri hari ini.
           </p>
 
           {/* CTA buttons */}
@@ -56,7 +56,7 @@ export function CTASection() {
                 size="xl"
                 className="bg-white text-primary hover:bg-white/90 shadow-lg"
               >
-                Start Learning Free
+                Mulai Belajar Gratis
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -66,7 +66,7 @@ export function CTASection() {
                 size="xl"
                 className="border-white/30 text-white hover:bg-white/10"
               >
-                For Business
+                Untuk Bisnis
               </Button>
             </Link>
           </div>
@@ -77,19 +77,19 @@ export function CTASection() {
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span>30-day money-back guarantee</span>
+              <span>Garansi uang kembali 30 hari</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span>Lifetime access</span>
+              <span>Akses selamanya</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span>Certificate of completion</span>
+              <span>Sertifikat kelulusan</span>
             </div>
           </div>
         </motion.div>

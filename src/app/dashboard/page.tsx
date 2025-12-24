@@ -36,28 +36,28 @@ const enrolledCourses = courses.slice(0, 3).map((course, index) => ({
 const stats = [
   {
     icon: BookOpen,
-    label: "Courses in Progress",
+    label: "Kursus dalam Progres",
     value: "3",
     color: "text-primary",
     bgColor: "bg-primary/10",
   },
   {
     icon: Clock,
-    label: "Hours Learned",
+    label: "Jam Belajar",
     value: "47",
     color: "text-violet",
     bgColor: "bg-violet/10",
   },
   {
     icon: Award,
-    label: "Certificates Earned",
+    label: "Sertifikat Diperoleh",
     value: "2",
     color: "text-emerald",
     bgColor: "bg-emerald/10",
   },
   {
     icon: Flame,
-    label: "Day Streak",
+    label: "Streak Hari",
     value: "12",
     color: "text-amber",
     bgColor: "bg-amber/10",
@@ -65,16 +65,16 @@ const stats = [
 ];
 
 const achievements = [
-  { icon: Trophy, title: "First Course Completed", earned: true },
-  { icon: Flame, title: "7-Day Streak", earned: true },
-  { icon: Target, title: "Perfect Quiz Score", earned: false },
-  { icon: Award, title: "Top 10% Learner", earned: false },
+  { icon: Trophy, title: "Kursus Pertama Selesai", earned: true },
+  { icon: Flame, title: "Streak 7 Hari", earned: true },
+  { icon: Target, title: "Skor Kuis Sempurna", earned: false },
+  { icon: Award, title: "Pembelajar Top 10%", earned: false },
 ];
 
 const upcomingLessons = [
-  { title: "Advanced React Patterns", time: "10:00 AM", course: "React & Next.js" },
-  { title: "User Research Methods", time: "2:00 PM", course: "UX Design" },
-  { title: "SEO Best Practices", time: "4:00 PM", course: "Digital Marketing" },
+  { title: "Pola React Lanjutan", time: "10:00 AM", course: "React & Next.js" },
+  { title: "Metode Riset Pengguna", time: "2:00 PM", course: "UX Design" },
+  { title: "Praktik Terbaik SEO", time: "4:00 PM", course: "Digital Marketing" },
 ];
 
 const containerVariants = {
@@ -110,10 +110,10 @@ export default function DashboardPage() {
               </Avatar>
               <div>
                 <h1 className="text-2xl font-bold text-slate-900">
-                  Welcome back, John!
+                  Selamat datang kembali, John!
                 </h1>
                 <p className="text-slate-600">
-                  Ready to continue learning? You&apos;re on a 12-day streak!
+                  Siap melanjutkan pembelajaran? Anda sedang dalam streak 12 hari!
                 </p>
               </div>
             </div>
@@ -162,10 +162,10 @@ export default function DashboardPage() {
             {/* Continue Learning */}
             <Card>
               <CardHeader className="flex flex-row items-center justify-between">
-                <CardTitle>Continue Learning</CardTitle>
+                <CardTitle>Lanjutkan Belajar</CardTitle>
                 <Link href="/courses">
                   <Button variant="ghost" size="sm" className="gap-1">
-                    View All
+                    Lihat Semua
                     <ChevronRight className="h-4 w-4" />
                   </Button>
                 </Link>
@@ -192,12 +192,12 @@ export default function DashboardPage() {
                         {course.title}
                       </h3>
                       <p className="mt-1 text-sm text-slate-500">
-                        Next: {course.nextLesson}
+                        Selanjutnya: {course.nextLesson}
                       </p>
                       <div className="mt-3">
                         <div className="flex items-center justify-between text-sm">
                           <span className="text-slate-600">
-                            {course.progress}% complete
+                            {course.progress}% selesai
                           </span>
                           <span className="text-slate-500">
                             {course.lastAccessed}
@@ -207,7 +207,7 @@ export default function DashboardPage() {
                       </div>
                     </div>
                     <Link href={`/courses/${course.slug}`}>
-                      <Button>Continue</Button>
+                      <Button>Lanjutkan</Button>
                     </Link>
                   </div>
                 ))}
@@ -217,14 +217,14 @@ export default function DashboardPage() {
             {/* Learning Activity */}
             <Card>
               <CardHeader>
-                <CardTitle>Learning Activity</CardTitle>
+                <CardTitle>Aktivitas Pembelajaran</CardTitle>
               </CardHeader>
               <CardContent>
                 <Tabs defaultValue="week">
                   <TabsList>
-                    <TabsTrigger value="week">This Week</TabsTrigger>
-                    <TabsTrigger value="month">This Month</TabsTrigger>
-                    <TabsTrigger value="year">This Year</TabsTrigger>
+                    <TabsTrigger value="week">Minggu Ini</TabsTrigger>
+                    <TabsTrigger value="month">Bulan Ini</TabsTrigger>
+                    <TabsTrigger value="year">Tahun Ini</TabsTrigger>
                   </TabsList>
                   <TabsContent value="week" className="mt-4">
                     <div className="flex items-end justify-between gap-2 h-40">
@@ -254,22 +254,22 @@ export default function DashboardPage() {
                     <div className="mt-4 flex items-center justify-center gap-6 text-sm text-slate-600">
                       <div className="flex items-center gap-2">
                         <div className="h-3 w-3 rounded bg-primary" />
-                        <span>Completed</span>
+                        <span>Selesai</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="h-3 w-3 rounded bg-primary/20" />
-                        <span>Goal</span>
+                        <span>Target</span>
                       </div>
                     </div>
                   </TabsContent>
                   <TabsContent value="month" className="mt-4">
                     <div className="flex h-40 items-center justify-center text-slate-500">
-                      Monthly activity chart
+                      Grafik aktivitas bulanan
                     </div>
                   </TabsContent>
                   <TabsContent value="year" className="mt-4">
                     <div className="flex h-40 items-center justify-center text-slate-500">
-                      Yearly activity chart
+                      Grafik aktivitas tahunan
                     </div>
                   </TabsContent>
                 </Tabs>
@@ -284,7 +284,7 @@ export default function DashboardPage() {
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
                   <Calendar className="h-5 w-5 text-primary" />
-                  Today&apos;s Schedule
+                  Jadwal Hari Ini
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -313,10 +313,10 @@ export default function DashboardPage() {
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
                   <Trophy className="h-5 w-5 text-amber" />
-                  Achievements
+                  Pencapaian
                 </CardTitle>
                 <Button variant="ghost" size="sm">
-                  View All
+                  Lihat Semua
                 </Button>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -345,7 +345,7 @@ export default function DashboardPage() {
                         {achievement.title}
                       </p>
                       <p className="text-xs text-slate-500">
-                        {achievement.earned ? "Earned" : "Locked"}
+                        {achievement.earned ? "Diperoleh" : "Terkunci"}
                       </p>
                     </div>
                   </div>
@@ -358,7 +358,7 @@ export default function DashboardPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5 text-emerald" />
-                  Recommended for You
+                  Rekomendasi untuk Anda
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -386,7 +386,7 @@ export default function DashboardPage() {
                 ))}
                 <Link href="/courses">
                   <Button variant="outline" className="w-full">
-                    Browse All Courses
+                    Jelajahi Semua Kursus
                   </Button>
                 </Link>
               </CardContent>

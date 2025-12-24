@@ -20,29 +20,29 @@ import { cn } from "@/lib/utils";
 
 const navigation = [
   {
-    name: "Courses",
+    name: "Kursus",
     href: "/courses",
     icon: BookOpen,
     submenu: [
-      { name: "All Courses", href: "/courses", description: "Browse 200+ courses" },
-      { name: "Design", href: "/courses?category=design", description: "UI/UX, Graphic Design" },
-      { name: "Development", href: "/courses?category=development", description: "Web, Mobile, Backend" },
-      { name: "Marketing", href: "/courses?category=marketing", description: "SEO, Social, Content" },
-      { name: "Data Science", href: "/courses?category=data", description: "Analytics, ML, AI" },
+      { name: "Semua Kursus", href: "/courses", description: "Jelajahi 200+ kursus" },
+      { name: "Desain", href: "/courses?category=design", description: "UI/UX, Desain Grafis" },
+      { name: "Pengembangan", href: "/courses?category=development", description: "Web, Mobile, Backend" },
+      { name: "Pemasaran", href: "/courses?category=marketing", description: "SEO, Sosial Media, Konten" },
+      { name: "Data Science", href: "/courses?category=data", description: "Analitik, ML, AI" },
     ],
   },
   {
-    name: "Learning Paths",
+    name: "Jalur Belajar",
     href: "/learning-paths",
     icon: GraduationCap,
   },
   {
-    name: "For Business",
+    name: "Untuk Bisnis",
     href: "/for-business",
     icon: Building2,
   },
   {
-    name: "Instructors",
+    name: "Instruktur",
     href: "/instructors",
     icon: Users,
   },
@@ -141,7 +141,7 @@ export function Header() {
                   >
                     <Input
                       type="search"
-                      placeholder="Search courses..."
+                      placeholder="Cari kursus..."
                       className="pr-10"
                       autoFocus
                       onBlur={() => setIsSearchOpen(false)}
@@ -163,17 +163,17 @@ export function Header() {
             <div className="hidden sm:flex sm:items-center sm:gap-3">
               <Link href="/pricing">
                 <Button variant="ghost" size="sm">
-                  Pricing
+                  Harga
                 </Button>
               </Link>
               <Link href="/dashboard">
                 <Button variant="outline" size="sm">
                   <User className="mr-2 h-4 w-4" />
-                  Sign In
+                  Masuk
                 </Button>
               </Link>
               <Link href="/courses">
-                <Button size="sm">Start Learning</Button>
+                <Button size="sm">Mulai Belajar</Button>
               </Link>
             </div>
 
@@ -204,7 +204,7 @@ export function Header() {
                   <div className="relative">
                     <Input
                       type="search"
-                      placeholder="Search courses..."
+                      placeholder="Cari kursus..."
                       className="pr-10"
                     />
                     <Search className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -227,17 +227,17 @@ export function Header() {
                 <div className="mt-4 space-y-2 border-t pt-4">
                   <Link href="/pricing" className="block" onClick={() => setIsOpen(false)}>
                     <Button variant="ghost" className="w-full justify-start">
-                      Pricing
+                      Harga
                     </Button>
                   </Link>
                   <Link href="/dashboard" className="block" onClick={() => setIsOpen(false)}>
                     <Button variant="outline" className="w-full">
                       <User className="mr-2 h-4 w-4" />
-                      Sign In
+                      Masuk
                     </Button>
                   </Link>
                   <Link href="/courses" className="block" onClick={() => setIsOpen(false)}>
-                    <Button className="w-full">Start Learning</Button>
+                    <Button className="w-full">Mulai Belajar</Button>
                   </Link>
                 </div>
               </div>

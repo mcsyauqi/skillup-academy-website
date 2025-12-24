@@ -44,15 +44,15 @@ export function InstructorsSection() {
         >
           <div>
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-              Learn from Industry Experts
+              Belajar dari Ahli Industri
             </h2>
             <p className="mt-2 text-lg text-slate-600">
-              Our instructors bring real-world experience to every lesson
+              Instruktur kami membawa pengalaman dunia nyata ke setiap pelajaran
             </p>
           </div>
           <Link href="/instructors">
             <Button variant="outline" className="gap-2">
-              View All Instructors
+              Lihat Semua Instruktur
               <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
@@ -97,7 +97,7 @@ export function InstructorsSection() {
                       <Star className="h-4 w-4 fill-amber text-amber" />
                       <span className="font-medium">{instructor.rating}</span>
                       <span className="text-sm text-slate-500">
-                        ({formatNumber(instructor.reviews)} reviews)
+                        ({formatNumber(instructor.reviews)} ulasan)
                       </span>
                     </div>
 
@@ -109,7 +109,7 @@ export function InstructorsSection() {
                       </div>
                       <div className="flex items-center gap-1 text-slate-500">
                         <BookOpen className="h-4 w-4" />
-                        <span>{instructor.courses} courses</span>
+                        <span>{instructor.courses} kursus</span>
                       </div>
                     </div>
 

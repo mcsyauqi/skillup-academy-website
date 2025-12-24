@@ -97,7 +97,7 @@ export default function CourseDetailPage({
               {/* Breadcrumb */}
               <nav className="mb-6 flex items-center gap-2 text-sm text-slate-400">
                 <Link href="/courses" className="hover:text-white">
-                  Courses
+                  Kursus
                 </Link>
                 <span>/</span>
                 <Link
@@ -131,16 +131,16 @@ export default function CourseDetailPage({
                   <Star className="h-5 w-5 fill-amber text-amber" />
                   <span className="font-bold">{course.rating}</span>
                   <span className="text-slate-400">
-                    ({formatNumber(course.reviews)} reviews)
+                    ({formatNumber(course.reviews)} ulasan)
                   </span>
                 </div>
                 <div className="flex items-center gap-1 text-slate-300">
                   <Users className="h-5 w-5" />
-                  <span>{formatNumber(course.students)} students</span>
+                  <span>{formatNumber(course.students)} siswa</span>
                 </div>
                 <div className="flex items-center gap-1 text-slate-300">
                   <Calendar className="h-5 w-5" />
-                  <span>Updated {course.updatedAt}</span>
+                  <span>Diperbarui {course.updatedAt}</span>
                 </div>
                 <div className="flex items-center gap-1 text-slate-300">
                   <Globe className="h-5 w-5" />
@@ -155,7 +155,7 @@ export default function CourseDetailPage({
                   <AvatarFallback>{course.instructor.name.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="text-sm text-slate-400">Created by</p>
+                  <p className="text-sm text-slate-400">Dibuat oleh</p>
                   <Link
                     href={`/instructors/${course.instructor.slug}`}
                     className="font-medium hover:text-primary"
@@ -184,7 +184,7 @@ export default function CourseDetailPage({
                         className="gap-2 bg-white/90 text-slate-900 hover:bg-white"
                       >
                         <Play className="h-5 w-5" />
-                        Preview Course
+                        Pratinjau Kursus
                       </Button>
                     </div>
                   </div>
@@ -213,39 +213,39 @@ export default function CourseDetailPage({
                     {/* CTA Buttons */}
                     <div className="mt-6 space-y-3">
                       <Button className="w-full" size="lg">
-                        Enroll Now
+                        Daftar Sekarang
                       </Button>
                       <Button variant="outline" className="w-full" size="lg">
                         <Heart className="mr-2 h-4 w-4" />
-                        Add to Wishlist
+                        Tambah ke Wishlist
                       </Button>
                     </div>
 
                     <p className="mt-4 text-center text-sm text-slate-500">
-                      30-day money-back guarantee
+                      Jaminan uang kembali 30 hari
                     </p>
 
                     <Separator className="my-6" />
 
                     {/* Course Includes */}
                     <div className="space-y-3">
-                      <h4 className="font-semibold">This course includes:</h4>
+                      <h4 className="font-semibold">Kursus ini mencakup:</h4>
                       <ul className="space-y-2 text-sm text-slate-600">
                         <li className="flex items-center gap-2">
                           <PlayCircle className="h-4 w-4 text-primary" />
-                          {formatDuration(course.duration)} of video content
+                          {formatDuration(course.duration)} konten video
                         </li>
                         <li className="flex items-center gap-2">
                           <BookOpen className="h-4 w-4 text-primary" />
-                          {course.lessons} lessons
+                          {course.lessons} pelajaran
                         </li>
                         <li className="flex items-center gap-2">
                           <Award className="h-4 w-4 text-primary" />
-                          Certificate of completion
+                          Sertifikat penyelesaian
                         </li>
                         <li className="flex items-center gap-2">
                           <Clock className="h-4 w-4 text-primary" />
-                          Lifetime access
+                          Akses selamanya
                         </li>
                       </ul>
                     </div>
@@ -254,7 +254,7 @@ export default function CourseDetailPage({
                     <div className="mt-6 flex items-center justify-center gap-4">
                       <Button variant="ghost" size="sm">
                         <Share2 className="mr-2 h-4 w-4" />
-                        Share
+                        Bagikan
                       </Button>
                     </div>
                   </CardContent>
@@ -276,7 +276,7 @@ export default function CourseDetailPage({
               </span>
             )}
           </div>
-          <Button>Enroll Now</Button>
+          <Button>Daftar Sekarang</Button>
         </div>
       </div>
 
@@ -285,17 +285,17 @@ export default function CourseDetailPage({
         <div className="lg:max-w-3xl">
           <Tabs defaultValue="overview">
             <TabsList className="mb-8">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
-              <TabsTrigger value="instructor">Instructor</TabsTrigger>
-              <TabsTrigger value="reviews">Reviews</TabsTrigger>
+              <TabsTrigger value="overview">Ringkasan</TabsTrigger>
+              <TabsTrigger value="curriculum">Kurikulum</TabsTrigger>
+              <TabsTrigger value="instructor">Instruktur</TabsTrigger>
+              <TabsTrigger value="reviews">Ulasan</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview">
               {/* What you'll learn */}
               <Card className="mb-8">
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold">What you&apos;ll learn</h2>
+                  <h2 className="text-xl font-bold">Yang akan Anda pelajari</h2>
                   <div className="mt-4 grid gap-3 sm:grid-cols-2">
                     {course.topics.map((topic, index) => (
                       <div key={index} className="flex items-start gap-2">
@@ -310,11 +310,11 @@ export default function CourseDetailPage({
               {/* Course content summary */}
               <Card className="mb-8">
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold">Course Content</h2>
+                  <h2 className="text-xl font-bold">Konten Kursus</h2>
                   <div className="mt-4 flex flex-wrap gap-6 text-sm text-slate-600">
-                    <span>{curriculum.length} sections</span>
-                    <span>{totalLessons} lessons</span>
-                    <span>{formatDuration(totalDuration)} total length</span>
+                    <span>{curriculum.length} bagian</span>
+                    <span>{totalLessons} pelajaran</span>
+                    <span>{formatDuration(totalDuration)} total durasi</span>
                   </div>
                 </CardContent>
               </Card>
@@ -322,19 +322,19 @@ export default function CourseDetailPage({
               {/* Requirements */}
               <Card className="mb-8">
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold">Requirements</h2>
+                  <h2 className="text-xl font-bold">Persyaratan</h2>
                   <ul className="mt-4 space-y-2 text-slate-600">
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      No prior experience required - we&apos;ll start from the basics
+                      Tidak perlu pengalaman sebelumnya - kami mulai dari dasar
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      A computer with internet access
+                      Komputer dengan akses internet
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Enthusiasm to learn and grow
+                      Antusiasme untuk belajar dan berkembang
                     </li>
                   </ul>
                 </CardContent>
@@ -343,18 +343,18 @@ export default function CourseDetailPage({
               {/* Description */}
               <Card>
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-bold">Description</h2>
+                  <h2 className="text-xl font-bold">Deskripsi</h2>
                   <div className="mt-4 space-y-4 text-slate-600">
                     <p>{course.description}</p>
                     <p>
-                      This comprehensive course will take you from beginner to advanced,
-                      covering all the essential concepts and practical skills you need
-                      to succeed in your career.
+                      Kursus komprehensif ini akan membawa Anda dari pemula hingga mahir,
+                      mencakup semua konsep penting dan keterampilan praktis yang Anda butuhkan
+                      untuk sukses dalam karier Anda.
                     </p>
                     <p>
-                      By the end of this course, you&apos;ll have the confidence and knowledge
-                      to apply what you&apos;ve learned to real-world projects and take your
-                      skills to the next level.
+                      Di akhir kursus ini, Anda akan memiliki kepercayaan diri dan pengetahuan
+                      untuk menerapkan apa yang telah Anda pelajari ke proyek dunia nyata dan membawa
+                      keterampilan Anda ke tingkat selanjutnya.
                     </p>
                   </div>
                 </CardContent>
@@ -365,9 +365,9 @@ export default function CourseDetailPage({
               <Card>
                 <CardContent className="p-6">
                   <div className="mb-6 flex items-center justify-between">
-                    <h2 className="text-xl font-bold">Course Curriculum</h2>
+                    <h2 className="text-xl font-bold">Kurikulum Kursus</h2>
                     <span className="text-sm text-slate-500">
-                      {totalLessons} lessons • {formatDuration(totalDuration)}
+                      {totalLessons} pelajaran • {formatDuration(totalDuration)}
                     </span>
                   </div>
 
@@ -378,7 +378,7 @@ export default function CourseDetailPage({
                           <div className="flex items-center gap-4">
                             <span className="font-semibold">{section.title}</span>
                             <span className="text-sm text-slate-500">
-                              {section.lessons.length} lessons
+                              {section.lessons.length} pelajaran
                             </span>
                           </div>
                         </AccordionTrigger>
@@ -438,11 +438,11 @@ export default function CourseDetailPage({
                         </div>
                         <div className="flex items-center gap-1">
                           <Users className="h-4 w-4 text-slate-400" />
-                          <span>{formatNumber(course.instructor.students)} students</span>
+                          <span>{formatNumber(course.instructor.students)} siswa</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <BookOpen className="h-4 w-4 text-slate-400" />
-                          <span>{course.instructor.courses} courses</span>
+                          <span>{course.instructor.courses} kursus</span>
                         </div>
                       </div>
 
@@ -474,7 +474,7 @@ export default function CourseDetailPage({
                         ))}
                       </div>
                       <p className="mt-1 text-sm text-slate-500">
-                        {formatNumber(course.reviews)} reviews
+                        {formatNumber(course.reviews)} ulasan
                       </p>
                     </div>
 
@@ -515,9 +515,9 @@ export default function CourseDetailPage({
                               ))}
                             </div>
                             <p className="mt-2 text-slate-600">
-                              Excellent course! The instructor explains everything clearly
-                              and the projects really helped solidify my understanding.
-                              Highly recommended for anyone looking to level up their skills.
+                              Kursus yang sangat bagus! Instruktur menjelaskan semuanya dengan jelas
+                              dan proyeknya benar-benar membantu memperkuat pemahaman saya.
+                              Sangat direkomendasikan untuk siapa saja yang ingin meningkatkan keterampilan mereka.
                             </p>
                           </div>
                         </div>
@@ -526,7 +526,7 @@ export default function CourseDetailPage({
                   </div>
 
                   <Button variant="outline" className="mt-6 w-full">
-                    Load More Reviews
+                    Muat Lebih Banyak Ulasan
                   </Button>
                 </CardContent>
               </Card>

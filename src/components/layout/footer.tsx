@@ -14,32 +14,32 @@ import { Separator } from "@/components/ui/separator";
 
 const footerLinks = {
   courses: [
-    { name: "All Courses", href: "/courses" },
-    { name: "Design", href: "/courses?category=design" },
-    { name: "Development", href: "/courses?category=development" },
-    { name: "Marketing", href: "/courses?category=marketing" },
+    { name: "Semua Kursus", href: "/courses" },
+    { name: "Desain", href: "/courses?category=design" },
+    { name: "Pengembangan", href: "/courses?category=development" },
+    { name: "Pemasaran", href: "/courses?category=marketing" },
     { name: "Data Science", href: "/courses?category=data" },
-    { name: "Business", href: "/courses?category=business" },
+    { name: "Bisnis", href: "/courses?category=business" },
   ],
   company: [
-    { name: "About Us", href: "/about" },
-    { name: "Careers", href: "/careers" },
+    { name: "Tentang Kami", href: "/about" },
+    { name: "Karir", href: "/careers" },
     { name: "Blog", href: "/blog" },
-    { name: "Press", href: "/press" },
-    { name: "Partners", href: "/partners" },
+    { name: "Pers", href: "/press" },
+    { name: "Mitra", href: "/partners" },
   ],
   resources: [
-    { name: "Learning Paths", href: "/learning-paths" },
-    { name: "For Business", href: "/for-business" },
-    { name: "Become an Instructor", href: "/teach" },
-    { name: "Help Center", href: "/help" },
-    { name: "Community", href: "/community" },
+    { name: "Jalur Pembelajaran", href: "/learning-paths" },
+    { name: "Untuk Bisnis", href: "/for-business" },
+    { name: "Jadi Instruktur", href: "/teach" },
+    { name: "Pusat Bantuan", href: "/help" },
+    { name: "Komunitas", href: "/community" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Cookie Policy", href: "/cookies" },
-    { name: "Refund Policy", href: "/refunds" },
+    { name: "Kebijakan Privasi", href: "/privacy" },
+    { name: "Syarat Layanan", href: "/terms" },
+    { name: "Kebijakan Cookie", href: "/cookies" },
+    { name: "Kebijakan Pengembalian", href: "/refunds" },
   ],
 };
 
@@ -60,10 +60,10 @@ export function Footer() {
           <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
             <div className="text-center lg:text-left">
               <h3 className="text-xl font-semibold text-white">
-                Subscribe to our newsletter
+                Berlangganan newsletter kami
               </h3>
               <p className="mt-1 text-slate-400">
-                Get the latest courses and learning tips delivered to your inbox.
+                Dapatkan info kursus terbaru dan tips belajar langsung ke email Anda.
               </p>
             </div>
             <div className="flex w-full max-w-md gap-3">
@@ -71,11 +71,11 @@ export function Footer() {
                 <Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
                 <Input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Masukkan email Anda"
                   className="border-slate-700 bg-slate-800 pl-10 text-white placeholder:text-slate-500 focus:border-primary focus:ring-primary"
                 />
               </div>
-              <Button>Subscribe</Button>
+              <Button>Langganan</Button>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-slate-400">
-              Empowering learners worldwide with expert-led courses in digital skills, business, and technology.
+              Memberdayakan pembelajar di seluruh dunia dengan kursus yang dipandu ahli dalam keterampilan digital, bisnis, dan teknologi.
             </p>
             <div className="mt-6 flex gap-4">
               {socialLinks.map((social) => (
@@ -114,7 +114,7 @@ export function Footer() {
           {/* Links */}
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              Courses
+              Kursus
             </h4>
             <ul className="space-y-2">
               {footerLinks.courses.map((link) => (
@@ -132,7 +132,7 @@ export function Footer() {
 
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              Company
+              Perusahaan
             </h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
@@ -150,7 +150,7 @@ export function Footer() {
 
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              Resources
+              Sumber Daya
             </h4>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -168,7 +168,7 @@ export function Footer() {
 
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              Legal
+              Hukum
             </h4>
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
@@ -189,9 +189,9 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-400 md:flex-row">
-          <p>&copy; {new Date().getFullYear()} SkillUp Academy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SkillUp Academy. Hak cipta dilindungi.</p>
           <div className="flex items-center gap-4">
-            <span>Made with passion for learning</span>
+            <span>Created by <a href="https://creativism.id" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors font-medium">Creativism Digital Marketing</a></span>
           </div>
         </div>
       </div>

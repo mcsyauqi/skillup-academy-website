@@ -42,15 +42,15 @@ export default function InstructorsPage() {
             className="mx-auto max-w-3xl text-center"
           >
             <Badge variant="secondary" className="mb-4">
-              Learn from the Best
+              Belajar dari yang Terbaik
             </Badge>
             <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">
-              Our Expert Instructors
+              Instruktur Ahli Kami
             </h1>
             <p className="mt-4 text-lg text-slate-600">
-              Learn from industry professionals who bring real-world experience
-              to every lesson. Our instructors have worked at top companies and
-              are passionate about teaching.
+              Belajar dari profesional industri yang membawa pengalaman dunia nyata
+              ke setiap pelajaran. Instruktur kami telah bekerja di perusahaan top dan
+              bersemangat tentang mengajar.
             </p>
           </motion.div>
         </div>
@@ -95,7 +95,7 @@ export default function InstructorsPage() {
                         <Star className="h-5 w-5 fill-amber text-amber" />
                         <span className="font-semibold">{instructor.rating}</span>
                         <span className="text-sm text-slate-500">
-                          ({formatNumber(instructor.reviews)} reviews)
+                          ({formatNumber(instructor.reviews)} ulasan)
                         </span>
                       </div>
 
@@ -105,13 +105,13 @@ export default function InstructorsPage() {
                           <p className="text-2xl font-bold text-slate-900">
                             {formatNumber(instructor.students)}
                           </p>
-                          <p className="text-sm text-slate-500">Students</p>
+                          <p className="text-sm text-slate-500">Siswa</p>
                         </div>
                         <div className="text-center">
                           <p className="text-2xl font-bold text-slate-900">
                             {instructor.courses}
                           </p>
-                          <p className="text-sm text-slate-500">Courses</p>
+                          <p className="text-sm text-slate-500">Kursus</p>
                         </div>
                       </div>
 
@@ -155,7 +155,7 @@ export default function InstructorsPage() {
                       {/* CTA */}
                       <Link href={`/instructors/${instructor.slug}`}>
                         <Button variant="outline" className="mt-6 w-full">
-                          View Profile
+                          Lihat Profil
                         </Button>
                       </Link>
                     </div>
@@ -172,17 +172,17 @@ export default function InstructorsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl gradient-primary p-8 text-center text-white sm:p-12">
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Share Your Expertise
+              Bagikan Keahlian Anda
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
-              Become an instructor and reach thousands of students worldwide.
-              We provide all the tools and support you need to create engaging courses.
+              Menjadi instruktur dan jangkau ribuan siswa di seluruh dunia.
+              Kami menyediakan semua alat dan dukungan yang Anda butuhkan untuk membuat kursus yang menarik.
             </p>
             <Button
               size="lg"
               className="mt-8 bg-white text-primary hover:bg-white/90"
             >
-              Become an Instructor
+              Menjadi Instruktur
             </Button>
           </div>
         </div>

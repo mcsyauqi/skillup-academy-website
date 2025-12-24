@@ -11,28 +11,28 @@ import { formatPrice, cn } from "@/lib/utils";
 
 const faqs = [
   {
-    question: "Can I switch plans later?",
-    answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.",
+    question: "Bisakah saya mengganti paket nanti?",
+    answer: "Ya, Anda dapat meningkatkan atau menurunkan paket Anda kapan saja. Perubahan akan tercermin dalam siklus penagihan berikutnya.",
   },
   {
-    question: "Is there a free trial?",
-    answer: "Yes, Pro plans come with a 7-day free trial. You won't be charged until the trial ends.",
+    question: "Apakah ada uji coba gratis?",
+    answer: "Ya, paket Pro dilengkapi dengan uji coba gratis 7 hari. Anda tidak akan dikenakan biaya sampai uji coba berakhir.",
   },
   {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, debit cards, and popular payment methods including GoPay, OVO, and bank transfers.",
+    question: "Metode pembayaran apa yang Anda terima?",
+    answer: "Kami menerima semua kartu kredit utama, kartu debit, dan metode pembayaran populer termasuk GoPay, OVO, dan transfer bank.",
   },
   {
-    question: "Can I get a refund?",
-    answer: "Yes, we offer a 30-day money-back guarantee on all paid plans. No questions asked.",
+    question: "Bisakah saya mendapatkan pengembalian dana?",
+    answer: "Ya, kami menawarkan jaminan uang kembali 30 hari untuk semua paket berbayar. Tanpa pertanyaan.",
   },
   {
-    question: "Do you offer discounts for students?",
-    answer: "Yes! Students with a valid .edu email can get 50% off on Pro plans.",
+    question: "Apakah Anda menawarkan diskon untuk siswa?",
+    answer: "Ya! Siswa dengan email .edu yang valid bisa mendapatkan diskon 50% untuk paket Pro.",
   },
   {
-    question: "How does team billing work?",
-    answer: "Team plans are billed per user per month. You can add or remove team members at any time.",
+    question: "Bagaimana penagihan tim bekerja?",
+    answer: "Paket tim ditagih per pengguna per bulan. Anda dapat menambah atau menghapus anggota tim kapan saja.",
   },
 ];
 
@@ -70,11 +70,11 @@ export default function PricingPage() {
             className="mx-auto max-w-3xl text-center"
           >
             <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">
-              Simple, Transparent Pricing
+              Harga yang Sederhana dan Transparan
             </h1>
             <p className="mt-4 text-lg text-slate-600">
-              Choose the plan that&apos;s right for you. All plans include access
-              to our community and support.
+              Pilih paket yang tepat untuk Anda. Semua paket termasuk akses
+              ke komunitas dan dukungan kami.
             </p>
 
             {/* Billing toggle */}
@@ -85,7 +85,7 @@ export default function PricingPage() {
                   !isAnnual ? "text-slate-900" : "text-slate-500"
                 )}
               >
-                Monthly
+                Bulanan
               </span>
               <button
                 onClick={() => setIsAnnual(!isAnnual)}
@@ -107,9 +107,9 @@ export default function PricingPage() {
                   isAnnual ? "text-slate-900" : "text-slate-500"
                 )}
               >
-                Annual
+                Tahunan
               </span>
-              <Badge variant="success">Save 20%</Badge>
+              <Badge variant="success">Hemat 20%</Badge>
             </div>
           </motion.div>
         </div>
@@ -136,7 +136,7 @@ export default function PricingPage() {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                       <Badge className="gradient-primary border-0 px-4 py-1 text-white">
-                        Most Popular
+                        Paling Populer
                       </Badge>
                     </div>
                   )}
@@ -148,11 +148,11 @@ export default function PricingPage() {
                     <div className="mt-4">
                       <span className="text-4xl font-bold text-slate-900">
                         {plan.price === 0
-                          ? "Free"
+                          ? "Gratis"
                           : formatPrice(isAnnual ? plan.price * 10 : plan.price)}
                       </span>
                       {plan.price > 0 && (
-                        <span className="text-slate-500">/{plan.period}</span>
+                        <span className="text-slate-500">/{plan.period === "month" ? "bulan" : plan.period}</span>
                       )}
                     </div>
                   </CardHeader>
@@ -185,17 +185,17 @@ export default function PricingPage() {
           {/* Enterprise CTA */}
           <div className="mt-12 rounded-2xl bg-slate-900 p-8 text-center text-white sm:p-12">
             <h2 className="text-2xl font-bold sm:text-3xl">
-              Need a custom solution?
+              Butuh solusi kustom?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-slate-300">
-              We offer custom enterprise plans with advanced features, dedicated
-              support, and flexible pricing for large teams.
+              Kami menawarkan paket enterprise kustom dengan fitur lanjutan, dukungan
+              khusus, dan harga fleksibel untuk tim besar.
             </p>
             <Button
               size="lg"
               className="mt-6 bg-white text-slate-900 hover:bg-white/90"
             >
-              Contact Sales
+              Hubungi Sales
             </Button>
           </div>
         </div>
@@ -212,10 +212,10 @@ export default function PricingPage() {
             className="text-center"
           >
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-              Frequently Asked Questions
+              Pertanyaan yang Sering Diajukan
             </h2>
             <p className="mt-4 text-lg text-slate-600">
-              Have questions? We have answers.
+              Punya pertanyaan? Kami punya jawabannya.
             </p>
           </motion.div>
 
@@ -255,12 +255,11 @@ export default function PricingPage() {
               <Check className="h-8 w-8 text-emerald" />
             </div>
             <h2 className="mt-6 text-2xl font-bold text-slate-900">
-              30-Day Money-Back Guarantee
+              Jaminan Uang Kembali 30 Hari
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-slate-600">
-              Try any paid plan risk-free. If you&apos;re not completely satisfied
-              within the first 30 days, we&apos;ll refund your payment. No questions
-              asked.
+              Coba paket berbayar apa pun tanpa risiko. Jika Anda tidak sepenuhnya puas
+              dalam 30 hari pertama, kami akan mengembalikan pembayaran Anda. Tanpa pertanyaan.
             </p>
           </div>
         </div>
