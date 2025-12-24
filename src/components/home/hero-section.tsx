@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Search, Play, Star, Users, BookOpen, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -129,15 +130,18 @@ export function HeroSection() {
           >
             <div className="relative">
               {/* Main illustration card */}
-              <div className="relative overflow-hidden rounded-2xl bg-white p-8 shadow-2xl">
-                <div className="aspect-video rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20">
-                  <div className="flex h-full flex-col items-center justify-center">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg">
-                      <Play className="h-10 w-10 text-primary" />
+              <div className="relative overflow-hidden rounded-2xl bg-white p-4 shadow-2xl">
+                <div className="relative aspect-video overflow-hidden rounded-lg">
+                  <Image
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=450&fit=crop"
+                    alt="Students learning together"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/90 shadow-lg cursor-pointer hover:scale-110 transition-transform">
+                      <Play className="h-10 w-10 text-primary ml-1" />
                     </div>
-                    <p className="mt-4 font-medium text-slate-600">
-                      Start your learning journey
-                    </p>
                   </div>
                 </div>
 
@@ -170,6 +174,22 @@ export function HeroSection() {
                     <div>
                       <p className="text-xs text-slate-500">Course Rating</p>
                       <p className="text-sm font-semibold">4.9/5.0</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}
+                  className="absolute -right-2 bottom-24 rounded-lg bg-white p-3 shadow-lg"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
+                      <Users className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500">Active Learners</p>
+                      <p className="text-sm font-semibold">2,847 online</p>
                     </div>
                   </div>
                 </motion.div>

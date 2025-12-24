@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Building2,
@@ -15,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { companyLogos } from "@/lib/data";
 
 const features = [
   {
@@ -58,15 +60,6 @@ const benefits = [
   "Priority support",
   "Volume discounts",
   "API access",
-];
-
-const logos = [
-  "Company 1",
-  "Company 2",
-  "Company 3",
-  "Company 4",
-  "Company 5",
-  "Company 6",
 ];
 
 const containerVariants = {
@@ -225,12 +218,18 @@ export default function ForBusinessPage() {
             TRUSTED BY LEADING COMPANIES
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-8 sm:gap-12">
-            {logos.map((logo, index) => (
+            {companyLogos.map((company, index) => (
               <div
                 key={index}
-                className="flex h-12 w-24 items-center justify-center rounded-lg bg-slate-100 text-sm font-medium text-slate-400"
+                className="flex h-12 w-28 items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all"
               >
-                {logo}
+                <Image
+                  src={company.logo}
+                  alt={company.name}
+                  width={100}
+                  height={40}
+                  className="object-contain"
+                />
               </div>
             ))}
           </div>
@@ -321,14 +320,21 @@ export default function ForBusinessPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 p-8">
-                <div className="flex h-full items-center justify-center">
-                  <div className="text-center">
-                    <BarChart3 className="mx-auto h-16 w-16 text-primary" />
-                    <p className="mt-4 text-lg font-medium text-slate-700">
-                      Analytics Dashboard Preview
-                    </p>
-                  </div>
+              <div className="relative aspect-video overflow-hidden rounded-2xl shadow-2xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
+                  alt="Analytics Dashboard"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-lg font-semibold text-white">
+                    Real-time Analytics Dashboard
+                  </p>
+                  <p className="text-sm text-white/80">
+                    Track your team&apos;s learning progress
+                  </p>
                 </div>
               </div>
             </motion.div>

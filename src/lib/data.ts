@@ -202,6 +202,73 @@ export const instructors: Instructor[] = [
       linkedin: "https://linkedin.com",
     },
   },
+  {
+    id: "5",
+    slug: "jessica-wang",
+    name: "Jessica Wang",
+    title: "Product Manager at Meta",
+    avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop",
+    bio: "Jessica has 8+ years of experience in product management at top tech companies. She teaches practical PM skills and frameworks used in Silicon Valley.",
+    students: 11250,
+    courses: 4,
+    rating: 4.9,
+    reviews: 1678,
+    specialties: ["Product Strategy", "Agile", "User Stories"],
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
+    },
+  },
+  {
+    id: "6",
+    slug: "alex-turner",
+    name: "Alex Turner",
+    title: "Mobile Developer & iOS Expert",
+    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
+    bio: "Alex is a mobile development expert with apps featured on the App Store. He specializes in Swift, SwiftUI, and cross-platform development.",
+    students: 9870,
+    courses: 6,
+    rating: 4.8,
+    reviews: 1432,
+    specialties: ["iOS", "Swift", "React Native"],
+    social: {
+      linkedin: "https://linkedin.com",
+      website: "https://example.com",
+    },
+  },
+  {
+    id: "7",
+    slug: "maria-santos",
+    name: "Maria Santos",
+    title: "Business Strategy Consultant",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+    bio: "Maria has advised Fortune 500 companies on business strategy and digital transformation. She brings MBA-level education to online learners.",
+    students: 14320,
+    courses: 7,
+    rating: 4.9,
+    reviews: 2156,
+    specialties: ["Business Strategy", "Leadership", "Consulting"],
+    social: {
+      linkedin: "https://linkedin.com",
+    },
+  },
+  {
+    id: "8",
+    slug: "kevin-nguyen",
+    name: "Kevin Nguyen",
+    title: "Cloud Architect at AWS",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    bio: "Kevin is a certified AWS solutions architect with expertise in cloud infrastructure, DevOps, and serverless architectures.",
+    students: 16780,
+    courses: 9,
+    rating: 4.8,
+    reviews: 2543,
+    specialties: ["AWS", "DevOps", "Kubernetes"],
+    social: {
+      linkedin: "https://linkedin.com",
+      twitter: "https://twitter.com",
+    },
+  },
 ];
 
 export const courses: Course[] = [
@@ -414,6 +481,42 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "December 15, 2024",
     readTime: 10,
   },
+  {
+    id: "4",
+    slug: "python-machine-learning-beginners",
+    title: "Getting Started with Machine Learning in Python",
+    excerpt: "A beginner-friendly introduction to machine learning concepts and how to implement them using Python and popular libraries.",
+    content: "",
+    thumbnail: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&h=450&fit=crop",
+    author: instructors[3],
+    category: "Data Science",
+    publishedAt: "December 12, 2024",
+    readTime: 15,
+  },
+  {
+    id: "5",
+    slug: "remote-work-productivity-tips",
+    title: "15 Productivity Tips for Remote Workers",
+    excerpt: "Maximize your productivity while working from home with these proven strategies from successful remote professionals.",
+    content: "",
+    thumbnail: "https://images.unsplash.com/photo-1585974738771-84483dd9f89f?w=800&h=450&fit=crop",
+    author: instructors[2],
+    category: "Career",
+    publishedAt: "December 10, 2024",
+    readTime: 7,
+  },
+  {
+    id: "6",
+    slug: "figma-design-systems",
+    title: "Building Scalable Design Systems in Figma",
+    excerpt: "Learn how to create and maintain design systems that scale across teams and products using Figma's powerful features.",
+    content: "",
+    thumbnail: "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=800&h=450&fit=crop",
+    author: instructors[0],
+    category: "Design",
+    publishedAt: "December 8, 2024",
+    readTime: 11,
+  },
 ];
 
 export const stats = {
@@ -452,6 +555,33 @@ export const testimonials = [
     content: "The Digital Marketing Bootcamp exceeded my expectations. I learned practical strategies that helped me increase our company's organic traffic by 150%.",
     rating: 5,
     course: "Digital Marketing Bootcamp 2024",
+  },
+];
+
+export const companyLogos = [
+  {
+    name: "Google",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png",
+  },
+  {
+    name: "Microsoft",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/320px-Microsoft_logo_%282012%29.svg.png",
+  },
+  {
+    name: "Amazon",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png",
+  },
+  {
+    name: "Meta",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/320px-Meta_Platforms_Inc._logo.svg.png",
+  },
+  {
+    name: "Apple",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/160px-Apple_logo_black.svg.png",
+  },
+  {
+    name: "Netflix",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/320px-Netflix_2015_logo.svg.png",
   },
 ];
 
