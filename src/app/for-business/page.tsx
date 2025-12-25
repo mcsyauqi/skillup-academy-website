@@ -11,6 +11,14 @@ import {
   Shield,
   Headphones,
   CheckCircle2,
+  Zap,
+  Globe,
+  Briefcase,
+  Heart,
+  ShoppingCart,
+  Code,
+  Star,
+  Target,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -60,6 +68,51 @@ const benefits = [
   "Dukungan prioritas",
   "Diskon volume",
   "Akses API",
+];
+
+const roiStats = [
+  { label: "Peningkatan Produktivitas", value: "40%", icon: TrendingUp },
+  { label: "Penghematan Biaya Pelatihan", value: "60%", icon: Target },
+  { label: "Tingkat Retensi Karyawan", value: "85%", icon: Users },
+  { label: "ROI Rata-rata", value: "320%", icon: BarChart3 },
+];
+
+const industries = [
+  { name: "Teknologi & Startup", icon: Code, color: "from-blue-500 to-cyan-500" },
+  { name: "E-Commerce", icon: ShoppingCart, color: "from-purple-500 to-pink-500" },
+  { name: "Layanan Kesehatan", icon: Heart, color: "from-green-500 to-emerald-500" },
+  { name: "Keuangan & Perbankan", icon: Briefcase, color: "from-amber-500 to-orange-500" },
+  { name: "Pendidikan", icon: Award, color: "from-indigo-500 to-violet-500" },
+  { name: "Manufaktur", icon: Globe, color: "from-red-500 to-pink-500" },
+];
+
+const caseStudies = [
+  {
+    company: "TechCorp Indonesia",
+    logo: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200&h=100&fit=crop",
+    industry: "Technology",
+    employees: "250+",
+    challenge: "Kesenjangan keterampilan teknis yang signifikan dalam tim engineering",
+    solution: "Implementasi jalur pembelajaran Full Stack Development untuk 80 engineers",
+    results: [
+      "40% peningkatan delivery speed",
+      "85% completion rate",
+      "15 promosi internal dalam 6 bulan",
+    ],
+  },
+  {
+    company: "Retail Nusantara",
+    logo: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=200&h=100&fit=crop",
+    industry: "Retail",
+    employees: "500+",
+    challenge: "Tim marketing membutuhkan upskilling di digital marketing",
+    solution: "Program pelatihan Digital Marketing untuk 120 staff marketing",
+    results: [
+      "3x peningkatan engagement online",
+      "50% penurunan customer acquisition cost",
+      "ROI 400% dalam 8 bulan",
+    ],
+  },
 ];
 
 const containerVariants = {
@@ -232,6 +285,54 @@ export default function ForBusinessPage() {
                 />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ROI Section */}
+      <section className="py-16 sm:py-24 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+              ROI & Hasil Terukur
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+              Investasi pelatihan yang memberikan dampak nyata pada bisnis Anda
+            </p>
+          </motion.div>
+
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {roiStats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="text-center">
+                  <CardContent className="p-6">
+                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-secondary/20">
+                      <stat.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <p className="mt-4 text-4xl font-bold text-slate-900">{stat.value}</p>
+                    <p className="mt-2 text-slate-600">{stat.label}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-slate-600">
+              Berdasarkan data dari 500+ perusahaan klien kami
+            </p>
           </div>
         </div>
       </section>

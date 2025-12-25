@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
@@ -11,6 +12,13 @@ import {
   Award,
   BookOpen,
   TrendingUp,
+  Zap,
+  CheckCircle2,
+  GraduationCap,
+  Shield,
+  Rocket,
+  Star,
+  Trophy,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -74,6 +82,82 @@ const team = [
   },
 ];
 
+const whyChooseUs = [
+  {
+    icon: GraduationCap,
+    title: "Instruktur Ahli Bersertifikat",
+    description: "Belajar dari profesional industri dengan pengalaman dunia nyata dan rekam jejak yang terbukti.",
+  },
+  {
+    icon: Zap,
+    title: "Pembelajaran Praktis",
+    description: "Proyek langsung dan latihan praktis yang mempersiapkan Anda untuk pekerjaan sesungguhnya.",
+  },
+  {
+    icon: Shield,
+    title: "Sertifikasi Terverifikasi",
+    description: "Dapatkan sertifikat yang diakui industri untuk meningkatkan kredibilitas profesional Anda.",
+  },
+  {
+    icon: Users,
+    title: "Komunitas Aktif",
+    description: "Bergabung dengan ribuan pembelajar dan dapatkan dukungan dari komunitas yang solid.",
+  },
+  {
+    icon: Rocket,
+    title: "Jalur Karier Jelas",
+    description: "Program pembelajaran terstruktur yang dirancang untuk memajukan karier Anda.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Jaminan Kepuasan",
+    description: "Jaminan uang kembali 30 hari jika Anda tidak puas dengan pembelajaran Anda.",
+  },
+];
+
+const companyPartners = [
+  { name: "Google", logo: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=200&h=100&fit=crop" },
+  { name: "Microsoft", logo: "https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?w=200&h=100&fit=crop" },
+  { name: "Amazon", logo: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=200&h=100&fit=crop" },
+  { name: "Meta", logo: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200&h=100&fit=crop" },
+  { name: "Apple", logo: "https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=200&h=100&fit=crop" },
+  { name: "Netflix", logo: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=200&h=100&fit=crop" },
+];
+
+const awards = [
+  {
+    year: "2024",
+    title: "Platform Pembelajaran Online Terbaik",
+    organization: "Indonesia Education Awards",
+    icon: Award,
+  },
+  {
+    year: "2023",
+    title: "Inovasi Teknologi Pendidikan Terbaik",
+    organization: "Tech Innovation Summit",
+    icon: Star,
+  },
+  {
+    year: "2023",
+    title: "Pilihan Pengguna Terbaik",
+    organization: "EdTech Choice Awards",
+    icon: Trophy,
+  },
+  {
+    year: "2022",
+    title: "Startup Pendidikan Terbaik",
+    organization: "Startup Indonesia Awards",
+    icon: Rocket,
+  },
+];
+
+const animatedStats = [
+  { label: "Siswa Aktif", value: 52847, suffix: "+", icon: Users },
+  { label: "Kursus Tersedia", value: 235, suffix: "+", icon: BookOpen },
+  { label: "Tingkat Kepuasan", value: 98, suffix: "%", icon: Star },
+  { label: "Negara", value: 45, suffix: "+", icon: Globe },
+];
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -92,6 +176,96 @@ const itemVariants = {
     transition: { duration: 0.5 },
   },
 };
+
+// Animated Counter Component
+function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const increment = target / steps;
+    const stepDuration = duration / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, stepDuration);
+
+    return () => clearInterval(timer);
+  }, [isVisible, target]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      onViewportEnter={() => setIsVisible(true)}
+    >
+      <span className="text-4xl font-bold text-slate-900 sm:text-5xl">
+        {count.toLocaleString()}{suffix}
+      </span>
+    </motion.div>
+  );
+}
+
+// Animated Statistics Section Component
+function AnimatedStatsSection() {
+  return (
+    <section className="py-16 sm:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+            Statistik Kami
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+            Angka-angka yang menunjukkan komitmen kami terhadap keunggulan dan dampak
+            yang kami buat dalam dunia pendidikan online.
+          </p>
+        </motion.div>
+
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {animatedStats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="text-center">
+                <CardContent className="p-6">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-secondary/20">
+                    <stat.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <div className="mt-4">
+                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                    <p className="mt-2 text-slate-600">{stat.label}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function AboutPage() {
   return (
@@ -205,6 +379,51 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <section className="bg-slate-50 py-16 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+              Mengapa Memilih Kami
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+              Kami menawarkan pengalaman pembelajaran yang komprehensif dan berkualitas tinggi
+              yang membedakan kami dari platform lainnya.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {whyChooseUs.map((reason) => (
+              <motion.div key={reason.title} variants={itemVariants}>
+                <Card className="group h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <CardContent className="p-6">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors">
+                      <reason.icon className="h-7 w-7 text-primary" />
+                    </div>
+                    <h3 className="mt-4 text-lg font-semibold text-slate-900">
+                      {reason.title}
+                    </h3>
+                    <p className="mt-2 text-slate-600">{reason.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Values Section */}
       <section className="bg-slate-50 py-16 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -250,6 +469,9 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Animated Statistics Section */}
+      <AnimatedStatsSection />
 
       {/* Timeline */}
       <section className="py-16 sm:py-24">
@@ -302,6 +524,57 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Company Partners Section */}
+      <section className="bg-white py-16 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+              Mitra Perusahaan
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+              Dipercaya oleh perusahaan-perusahaan terkemuka untuk melatih tenaga kerja mereka.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6"
+          >
+            {companyPartners.map((company, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="flex items-center justify-center"
+              >
+                <div className="group relative h-20 w-full overflow-hidden rounded-lg bg-slate-50 p-4 transition-all duration-300 hover:shadow-lg">
+                  <Image
+                    src={company.logo}
+                    alt={company.name}
+                    fill
+                    className="object-contain grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <div className="mt-12 text-center">
+            <p className="text-slate-600">
+              Dan banyak perusahaan lainnya yang mempercayai kami untuk pengembangan karyawan mereka.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Team Section */}
       <section className="bg-slate-50 py-16 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -344,6 +617,71 @@ export default function AboutPage() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Awards & Recognition Section */}
+      <section className="py-16 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+              Penghargaan & Pengakuan
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+              Prestasi kami dalam industri teknologi pendidikan telah diakui oleh
+              berbagai organisasi dan komunitas.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            {awards.map((award, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="group h-full border-2 transition-all duration-300 hover:border-amber hover:shadow-lg">
+                  <CardContent className="p-6 text-center">
+                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-amber/20 to-yellow-500/20 group-hover:from-amber/30 group-hover:to-yellow-500/30 transition-colors">
+                      <award.icon className="h-8 w-8 text-amber" />
+                    </div>
+                    <Badge variant="outline" className="mt-4">
+                      {award.year}
+                    </Badge>
+                    <h3 className="mt-3 font-semibold text-slate-900">
+                      {award.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-slate-600">
+                      {award.organization}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <div className="mt-12 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber/10 to-yellow-500/10 px-6 py-3"
+            >
+              <Trophy className="h-5 w-5 text-amber" />
+              <span className="text-slate-700">
+                Dan masih banyak penghargaan lainnya yang telah kami raih
+              </span>
+            </motion.div>
+          </div>
         </div>
       </section>
 
